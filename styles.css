@@ -1,0 +1,278 @@
+/* =========================================================
+   Indian Constitution Portal — stylesheet
+   Palette drawn from sandstone government architecture and
+   the Ashoka Chakra, rather than a generic SaaS card kit.
+   ========================================================= */
+
+:root {
+  --paper:        #FBF7EE;
+  --paper-dim:     #F3EDDF;
+  --ink:          #202A33;
+  --ink-soft:     #4B5560;
+  --muted:        #8A8172;
+  --line:         #DCD2BB;
+  --blue:         #0B3D91;   /* Ashoka Chakra blue */
+  --blue-deep:    #082A66;
+  --brick:        #A6532A;   /* sandstone terracotta */
+  --brick-soft:   #C97F52;
+
+  --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  --sans:  'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --content-width: 1100px;
+  --radius: 3px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  color: var(--ink);
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+  font-weight: 700;
+}
+
+h1 { font-size: clamp(2rem, 4vw, 2.9rem); letter-spacing: -0.01em; }
+h2 {
+  font-size: 1.5rem;
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid var(--brick);
+  display: inline-block;
+}
+h3 { font-size: 1.15rem; }
+
+p { color: var(--ink-soft); max-width: 62ch; }
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+a:hover, a:focus-visible { border-bottom-color: var(--blue); }
+a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+
+.container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+/* ---------------- Header / Nav ---------------- */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1rem 1.75rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--blue-deep);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo i { color: var(--brick); }
+
+nav { display: flex; gap: 1.75rem; flex-wrap: wrap; }
+
+nav a {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  border-bottom: none;
+  padding-bottom: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+nav a:hover, nav a:focus-visible {
+  color: var(--blue-deep);
+  border-bottom: 2px solid var(--brick);
+}
+
+/* ---------------- Hero ---------------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 4.5rem 1.5rem 3.5rem;
+  text-align: left;
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.hero h1 { max-width: 16ch; }
+.hero p { font-size: 1.1rem; max-width: 52ch; }
+
+.hero-img {
+  display: block;
+  margin-top: 2rem;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+/* A quiet chakra motif — the one deliberate motion moment on the page */
+.ashoka-watermark {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background:
+    repeating-conic-gradient(var(--blue) 0deg 7.5deg, transparent 7.5deg 15deg);
+  opacity: 0.07;
+  animation: chakra-spin 90s linear infinite;
+  pointer-events: none;
+}
+@keyframes chakra-spin {
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ashoka-watermark { animation: none; }
+}
+
+/* ---------------- Card grids ---------------- */
+
+.cards-section {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: var(--paper-dim);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.4rem;
+}
+
+.card h3 { margin-bottom: 0.3em; }
+.card p { margin: 0.2em 0; font-size: 0.95rem; }
+.card p:first-of-type { color: var(--brick); font-weight: 700; font-size: 0.85rem; }
+
+.card img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--line);
+}
+
+.card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Amendments get a brick accent instead of blue, to read as a distinct section */
+.container .card,
+.design-upgrades .card {
+  border-left-color: var(--brick);
+}
+
+/* ---------------- Interactive elements ---------------- */
+
+.interactive-elements {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+}
+
+.search-box {
+  font-family: var(--sans);
+  font-size: 1rem;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  width: min(420px, 100%);
+}
+.search-box:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
+
+.btn-search {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.65rem 1.4rem;
+  margin-left: 0.6rem;
+  background: var(--blue);
+  color: var(--paper);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.btn-search:hover, .btn-search:focus-visible { background: var(--blue-deep); }
+
+.dropdown {
+  margin-top: 1.75rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+  background: var(--paper-dim);
+}
+.dropdown summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--blue-deep);
+}
+.dropdown ul { margin: 0.75rem 0 0.25rem; padding-left: 1.3rem; }
+.dropdown li { margin: 0.3rem 0; color: var(--ink-soft); }
+
+/* ---------------- Footer ---------------- */
+
+footer {
+  text-align: center;
+  padding: 1.75rem 1.5rem;
+  background: var(--ink);
+  color: var(--paper-dim);
+  font-size: 0.85rem;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 640px) {
+  header { padding: 0.85rem 1.1rem; }
+  nav { gap: 1rem; }
+  .hero { padding: 3rem 1.1rem 2.5rem; }
+  .btn-search { margin-left: 0; margin-top: 0.6rem; display: block; }
+}

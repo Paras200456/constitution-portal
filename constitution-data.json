@@ -1,0 +1,104 @@
+{
+  "site": {
+    "title": "Indian Constitution Portal",
+    "tagline": "Discover the foundation of India's democracy: articles, amendments, and laws.",
+    "description": "An educational resource on the Indian Constitution, created to promote awareness of democratic principles.",
+    "team": [
+      { "name": "Paras", "role": "BSc Hons Computer Science Student" },
+      { "name": "Paras", "role": "Web Developer & Researcher" }
+    ],
+    "references": [
+      { "label": "Constitution of India (Official)", "url": "https://www.constitutionofindia.net/" },
+      { "label": "PRS Legislative Research", "url": "https://prsindia.org/" },
+      { "label": "Parliament of India", "url": "https://www.parliamentofindia.nic.in/" },
+      { "label": "Ministry of Law and Justice", "url": "https://www.lawmin.nic.in/" }
+    ]
+  },
+  "fundamentalRights": [
+    {
+      "title": "Right to Equality",
+      "articles": "Articles 14-18",
+      "description": "Ensures equality before the law and prohibits discrimination."
+    },
+    {
+      "title": "Right to Freedom",
+      "articles": "Articles 19-22",
+      "description": "Freedom of speech, assembly, movement, and personal liberty."
+    },
+    {
+      "title": "Right Against Exploitation",
+      "articles": "Articles 23-24",
+      "description": "Prohibits trafficking, forced labor, and child labor."
+    },
+    {
+      "title": "Right to Freedom of Religion",
+      "articles": "Articles 25-28",
+      "description": "Freedom of conscience and the right to practice any religion."
+    }
+  ],
+  "schedules": [
+    {
+      "title": "1st Schedule",
+      "description": "Lists states and union territories."
+    },
+    {
+      "title": "7th Schedule",
+      "description": "Division of powers between Union and States."
+    },
+    {
+      "title": "8th Schedule",
+      "description": "Recognized official languages."
+    }
+  ],
+  "amendments": [
+    {
+      "number": 1,
+      "year": 1951,
+      "title": "1st Amendment (1951)",
+      "description": "Abolished zamindari, added land reforms, and restricted freedom of speech for public order.",
+      "pdf": "https://prsindia.org/files/bill_files/1st_Amendment.pdf"
+    },
+    {
+      "number": 7,
+      "year": 1956,
+      "title": "7th Amendment (1956)",
+      "description": "Reorganized states on linguistic basis, creating new states like Andhra Pradesh.",
+      "pdf": "https://prsindia.org/files/bill_files/7th_Amendment.pdf"
+    },
+    {
+      "number": 24,
+      "year": 1971,
+      "title": "24th Amendment (1971)",
+      "description": "Abolished privy purses for former rulers and nationalized banks.",
+      "pdf": "https://prsindia.org/files/bill_files/24th_Amendment.pdf"
+    },
+    {
+      "number": 42,
+      "year": 1976,
+      "title": "42nd Amendment (1976)",
+      "description": "Added Fundamental Duties, changed preamble to \"secular democratic republic,\" and strengthened central powers.",
+      "pdf": "https://prsindia.org/files/bill_files/42nd_Amendment.pdf"
+    },
+    {
+      "number": 44,
+      "year": 1978,
+      "title": "44th Amendment (1978)",
+      "description": "Restored fundamental rights, limited emergency powers, and protected property rights.",
+      "pdf": "https://prsindia.org/files/bill_files/44th_Amendment.pdf"
+    },
+    {
+      "number": 73,
+      "year": 1992,
+      "title": "73rd Amendment (1992)",
+      "description": "Granted constitutional status to Panchayats for local self-governance.",
+      "pdf": "https://prsindia.org/files/bill_files/73rd_Amendment.pdf"
+    },
+    {
+      "number": 86,
+      "year": 2002,
+      "title": "86th Amendment (2002)",
+      "description": "Made education a fundamental right for children aged 6-14.",
+      "pdf": "https://prsindia.org/files/bill_files/86th_Amendment.pdf"
+    }
+  ]
+}
